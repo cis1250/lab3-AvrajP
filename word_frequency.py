@@ -31,9 +31,9 @@ def is_sentence(text):
 
 user_sentence = input("Enter a sentence: ")
 
-while (is_sentence(user_sentence) == False):
+while not is_sentence(user_sentence):
     print("This does not meet the criteria for a sentence.")
-    user_input = input("Enter a sentence: ")
+    user_sentence = input("Enter a sentence: ")
 
 
 clean_sentence = user_sentence.lower()
@@ -48,9 +48,9 @@ frequencies = []
 for word in words:
         if word in unique_words:
                 index = unique_words.index(word)
-                frequences[index] += 1
+                frequencies[index] += 1
         else:
-                unique words.append(word)
+                unique_words.append(word)
                 frequencies.append(1)
 
 print("\nWord frequencies:")
